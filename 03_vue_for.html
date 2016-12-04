@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vue</title>
+  <style>
+    table {
+      border: 1px solid #000;
+    }
+  </style>
+  <script src="./node_modules/vue/dist/vue.js"></script>
+
+</head>
+<body>
+<div  id="app-4">
+<p>list title</p>
+
+  <!--v-if 取反显示请求数据-->
+  <table v-if="!errorCode" v-for="module in datas">
+    <tr>
+      <td>{{module.erp}}</td>
+      <td>{{module.email}}</td>
+      <td>{{module.mobile}}</td>
+    </tr>
+
+  </table>
+</div>
+
+</body>
+<script>
+  var app = new Vue({
+    el: "#app-4",
+    "data": {
+      "datas": [
+        {
+          "created": 1478228972000,
+          "email": "zhenghao5@jd.com",
+          "erp": "zhenghao23",
+          "id": 2,
+          "mobile": "15600995244",
+          "modified": 1478228972000,
+          "sellerGroup": "1",
+          "sellerName": "zhenghao",
+          "yn": 1
+        },
+        {
+          "created": 1478229864000,
+          "email": "chengfubei@jd.com",
+          "erp": "chengfubei",
+          "id": 3,
+          "mobile": "18310924650",
+          "modified": 1478229864000,
+          "sellerGroup": "1",
+          "sellerName": "chengfubei",
+          "yn": 1
+        },
+        {
+          "created": 1478229890000,
+          "email": "yangzhao1@jd.com",
+          "erp": "yangzhao26",
+          "id": 4,
+          "mobile": "15632389268",
+          "modified": 1478229890000,
+          "sellerGroup": "1",
+          "sellerName": "yangzhao",
+          "yn": 1
+        },
+        {
+          "created": 1478229943000,
+          "email": "yinxingtao@jd.com",
+          "erp": "yinxingtao",
+          "id": 5,
+          "mobile": "13641352328",
+          "modified": 1478229943000,
+          "sellerGroup": "1",
+          "sellerName": "xingtao",
+          "yn": 1
+        },
+        {
+          "created": 1478250688000,
+          "email": "baibing6@jd.com",
+          "erp": "baibing15",
+          "id": 19,
+          "mobile": "18910569701",
+          "modified": 1478250688000,
+          "sellerGroup": "1",
+          "sellerName": "baibing",
+          "yn": 1
+        },
+        {
+          "created": 1478250780000,
+          "email": "chenyang16@jd.com",
+          "erp": "chenyang92",
+          "id": 20,
+          "mobile": "13811089864",
+          "modified": 1478250780000,
+          "sellerGroup": "",
+          "sellerName": "chenyang",
+          "yn": 1
+        },
+        {
+          "created": 1478250804000,
+          "email": "dangyuanchao@jd.com",
+          "erp": "dangyuanchao",
+          "id": 21,
+          "mobile": "18513955321",
+          "modified": 1478250804000,
+          "sellerGroup": "",
+          "sellerName": "dangyuanchao",
+          "yn": 1
+        },
+        {
+          "created": 1478250825000,
+          "email": "fanchen@jd.com",
+          "erp": "bjjsfanchen",
+          "id": 22,
+          "mobile": "18500132796",
+          "modified": 1478250825000,
+          "sellerGroup": "",
+          "sellerName": "bjjsfanchen",
+          "yn": 1
+        }
+      ],
+      "errStrSet": [],
+      "errorCode": 0,
+      "message": "",
+      "pageInfo": {
+        "currentPage": 0,
+        "pageSize": 0,
+        "totalPage": 0,
+        "totalRecord": 6
+      },
+      "success": true
+    },
+    "code": 200
+  })
+</script>
+
+
+</html>
+
+
+
+

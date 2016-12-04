@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+  <script src="./node_modules/vue/dist/vue.js"></script>
+  <style>
+    .red{
+      color:red;
+    }
+  </style>
+
+</head>
+<body>
+<div id="app-2">
+  <p v-bind:class="color">应该是红颜色的字 </p>
+  <span v-bind:title="message">{{message}}</span>
+</div>
+<div id="app-3">
+  <p v-if="seen">你能看到我吗</p>
+</div>
+
+</body>
+<script>
+  var app =new Vue({
+    el:"#app-2",
+    data:{
+      message:"you load this page in:"+new Date(),
+      color:"red",
+
+    }
+  })
+  var app3 =new Vue({
+    el:"#app-3",
+    data:{
+      seen:true
+    }
+  })
+</script>
+
+</html>
+
+
+
+

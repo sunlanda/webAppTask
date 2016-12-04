@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vue</title>
+  <style>
+    table {
+      border: 1px solid #000;
+    }
+  </style>
+  <script src="./node_modules/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+<p>input</p>
+  <!--<div id="app-5">
+    <p>{{ message }}</p>
+    <button v-on:click="reverseMessage">Reverse Message</button>
+    <input type="button" v-on:click="reverseMessage" value="clickMe">
+  </div>-->
+
+  <div id="app-6">
+    <p>{{ message }}</p>
+    <input type="text" v-model="message" >
+  </div>
+
+</body>
+<script>
+  //固定属性 data methods
+/*
+  var app =new Vue({
+    el:"#app-5",
+    data:{
+      message:"Hello Vue.js!"
+    },
+    methods: {
+      reverseMessage: function () {
+        console.log(this.message)
+        this.message = this.message.split('').reverse().join('')
+        //翻转字符  切割后翻转并重组
+
+      }
+    }
+  })*/
+  var app6 = new Vue({
+    el: '#app-6',
+    data: {
+      message: 'Hello Vue!'
+    }
+  })
+  //数据双向绑定 在input输入框下一步进行字符校验和参数集合
+</script>
+
+
+</html>
+
+
+
+
