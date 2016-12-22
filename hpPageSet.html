@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>XXX后台管理系统</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/vue.css" rel="stylesheet">
+    <script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
+    <!--vue-->
+    <script src="http://cdn.jsdelivr.net/vue/1.0.7/vue.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.7/vue.min.js"></script>
+</head>
+<body>
+<section class="navbar" id="headeId">
+    <div class="logo"><a href="#"><img src="" alt=""></a></div>
+
+    <div class="topRight">
+        <ul>
+            <li class="last hasSub" style="width:150px;"><span id="userInfoId">请登录</span> <i
+                    class="menuIcon"></i>
+
+                <div class="topSub" style="width:150px;">
+                    <!--<a href="http://inf-back.jd.com:3000/gz/userc/base">个人中心</a>-->
+                    <a href="#">个人中心</a>
+                    <!--<a href="#">账号管理</a>-->
+                    <!--<a  href="javascript:;" id ="logout_text">退出</a>-->
+                    <a href="#">退出</a>
+                </div>
+            </li>
+            <li class="last hasSub hide" id="subText">子账户</li>
+            <li class="last hasSub hide" id="adminText"></li>
+            <li><a href="#" class="contact-us">帮助中心</a></li>
+            <li><a href="javascript:;" class="contact-us">联系我们</a></li>
+
+
+        </ul>
+    </div>
+</section>
+<section class="content">
+    <div class="rightCon">
+
+        <div class="mainCon"id="mainCon">
+            <div class="indexTit over-h">
+                <h2 class="fl"><i class="titIcon"></i>XXX后台管理系统</h2>
+            </div>
+            <div class="innerCon topBar">
+                <div class="nav-directory">
+                    <div class="nav-title">活动设置</div>
+                    <div class="nav-content">
+                        <div class="banner-btn">
+                            <div class="fl">
+                                <a href="javascript:void 0;" class="btn-normal btn-moveUp">上移</a>
+                                <a href="javascript:void 0;" class="btn-normal btn-moveDown">下移</a>
+                            </div>
+                            <div class="fr">
+                                <a href="javascript:void 0;" class="btn-normal">预览</a>
+                            </div>
+                            <div class="fr">
+                                <a href="javascript:void 0;" class="btn-normal btn_creatAct">创建活动</a>
+                            </div>
+                        </div>
+                        <table class="tb-top-v1 bannerSet margin-link">
+                            <colgroup>
+                                <col width="50">
+                                <col width="20%">
+                                <col width="20%">
+                                <col width="20%">
+                                <col width="20%">
+                                <col width="20%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>活动名称</th>
+                                <th>创建时间</th>
+                                <th>最后修改时间</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody  id="banner_main">
+
+                            <tr v-cloak class="lineTr" data-id="11" v-for="tableTrList in result ">
+                                <td><i class="check checked"></i></td>
+                                <td><p class="banner-description">{{tableTrList.name| reverseMessage}}</p><img class="banner-narrow" src="{{tableTrList.picUrl}}" alt=""></td>
+                                <td>{{tableTrList.createTime }}</td>
+                                <td>{{new Date(tableTrList.updateTime).toLocaleString() }}</td>
+                                <td>{{tableTrList.content | reverse}}</td>
+                                <td>
+                                    <a class="list_online" status="1" href="#">下线</a>
+                                    <a class="list_edit" href="#">编辑</a>
+                                    <a class="list_del" href="#">删除</a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 删除弹窗 -->
+        <div class="popup confirmDel" style="display:none;">
+            <p>删除这些导航将会删除它们的子页面，您确定要删除？</p>
+        </div>
+
+    </div>
+</section>
+
+<script>
+
+    //1.请求php数据 将图片for循环出来
+    //2.点击事件请求排序参数和表单
+    //3.页面跳转 route
+
+
+    new Vue({
+        el: '#mainCon',
+        data: {
+            code: 0,
+            msg: "success",
+            "result": [
+                    {
+                "id": 22,
+                "name": "备战双22",
+                "picUrl": "http://www.jcloud.com/home/images/jcloud_banner_7_@1x.png",
+                "webUrl": "http://www.jcloud.com/activity/promotion20160927.html",
+                "sort": 22,
+                "clstag": "pageclick|keycount|jcloud_portal_201608151|59",
+                "status": 0,
+                "operator": null,
+                "createTime": 1475978984000,
+                "updateTime": 1475978995000,
+                "backgroud": null,
+                "publishTime": 1477037612000,
+                "bannerType": 0,
+                "content": "<ul><li>111</li></ul>"
+            }, {
+                "id": 33,
+                "name": "备战双33",
+                "picUrl": "http://www.jcloud.com/home/images/jcloud_banner_6_@1x.jpg",
+                "webUrl": "http://www.jcloud.com/tour/index.html",
+                "sort": 33,
+                "clstag": null,
+                "status": 0,
+                "operator": null,
+                "createTime": 1475978985000,
+                "updateTime": 1475978996000,
+                "backgroud": null,
+                "publishTime": 1477037613000,
+                "bannerType": 0,
+                "content": "<ul><li>111</li></ul>"
+            }, {
+                "id": 11,
+                "name": "备战双11",
+                "picUrl": "http://www.jcloud.com/activity/images/autumn-banner.jpg",
+                "webUrl": "http://www.jcloud.com/activity/promotion20160909.html",
+                "sort": 11,
+                "clstag": "pageclick|keycount|jcloud_portal_201608151|52",
+                "status": 0,
+                "operator": null,
+                "createTime": 1475978797000,
+                "updateTime": 1475978799000,
+                "backgroud": null,
+                "publishTime": 1477037611000,
+                "bannerType": 0,
+                "content": "<ul><li>111</li></ul>"
+            }],
+            reverseMessage: function () {
+                return this.message.split('').reverse().join('')
+            }
+        }
+    });
+    // 注册
+    Vue.filter('moment', function (value, formatString) {
+        formatString = formatString || 'YYYY-MM-DD HH:mm:ss';
+        return moment(value).format(formatString);
+    });
+
+    Vue.filter('reverse', function (value) {
+        return value.split('').reverse().join('')
+    })
+
+    // getter，返回已注册的过滤器
+//    var myFilter = Vue.filter('moment')
+</script>
+</body>
+</html>

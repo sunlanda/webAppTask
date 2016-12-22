@@ -1,0 +1,31 @@
+
+/*时间选择*/
+
+.calender{display:none; position:absolute; z-index:1020; left:16px; width:308px; border:1px solid #ccc; background:#fff; overflow:hidden;}
+.calender .tit{height:36px; padding: 0 0 0 8px; border-bottom:1px solid #ccc; background: #eee; color: #666; font-size: 14px; text-align:right; line-height: 32px; overflow:hidden;  }
+.calender .tit a:hover{color:#f00;}
+.calender .tit span.dates{float:left; display:inline-block; color:#666; font-size:12px; line-height:36px;}
+.calender .tit span.dates a{margin:0 4px; color:#333; font-size:12px; font-weight:bold;}
+.calender .tit span.tools a{display:inline-block; width:20px; height:0px; margin:8px 4px; padding:20px 0 0; background:url("../images/calendar.png") 100px 100px no-repeat; overflow:hidden; vertical-align: top;}
+.calender .tit span.tools a.prev_m{background-position:-4px -4px;}
+.calender .tit span.tools a.next_m{background-position:-32px -4px;}
+.calender .tit span.tools a.prev_y{background-position:-60px -4px;}
+.calender .tit span.tools a.next_y{background-position:-88px -4px;}
+.calender .tit span.tools a.today{width:auto; height:20px; padding:0; color:#333; font-size:12px; font-weight:bold; line-height:20px;}
+.calender .tit span.tools a.btn_clear{width:auto;  height: 36px; margin: 0 0 0 8px; padding: 0 12px; border-left:1px solid #ccc; background: #ddd; color:#333; font-size:12px; font-weight: bold; line-height: 36px; vertical-align: top;}
+.calender .cnt{position:relative; overflow:hidden;}
+.calender .week{position:relative; z-index:5; height:32px; border-bottom:1px solid #eee; background:#f6f6f6;}
+.calender .week li{float:left; width:44px; color:#999; text-align:center; line-height:32px;}
+.calender .days{position:relative; z-index:1; clear:both; overflow:hidden; zoom:1;}
+.calender .days li{float:left; margin:-1px 0 0 -1px; border:1px solid #eee; border-width:1px 0 0 1px;}
+.calender .days li a{display:inline-block; width:44px; height:32px; color:#666; font-size:12px; text-align:center; line-height:32px;}
+.calender .days li a.out{color:#bbb;}
+.calender .days li a.weekend{background:#f9f9f9;}
+.calender .days li a.today{background:#eeffee; color:#3377BC; font-size:14px; font-weight:bold;}
+.calender .days li a.sel{background:#E8F6FF; color: #33BC8C; font-size:14px;}
+.calender .days li a:hover{color:#f00;}
+.calender .drop{position:absolute; z-index:20; left:0; top:0; width:100%; height:0; background:#fff; text-align:center; line-height:32px; overflow:hidden;
+    transition: all 0.2s; -moz-transition: all 0.2s; -webkit-transition: all 0.2s; -o-transition: all 0.2s;}
+.calender .drop a{margin:0 8px; color:#333; font-size:12px;}
+.calender .drop a.curr{color:#33BC8C; text-decoration:underline;}
+.calender .drop a:hover{color:#33BC8C;}
