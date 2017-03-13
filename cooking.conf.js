@@ -6,7 +6,7 @@ cooking.set({
     entry: './src/index.js', // 指定入口文件
     dist: './dist', // 设置打包后的文件目录
     hash: true, // 打包的文件是否带 hash
-    sourceMap: true // 是否带 sourceMap
+    sourceMap: false // 是否带 sourceMap
 });
 
 // 生成 webpack 配置并导出
