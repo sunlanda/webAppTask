@@ -44,11 +44,11 @@
           <th class="text-center">年龄</th>
           <th class="text-center">操作</th>
         </tr>
-        <tr class="text-center" v-for="item in myData">
-          <td>{{$index+1}}</td>
+        <tr class="text-center" v-for="(item,key) in myData">
+          <td>{{key+1}}</td>
           <td>{{item.name}}</td>
           <td>{{item.age}}</td>
-          <td><button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#layer" @click="nowIndex=$index">删除</button></td>
+          <td><button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#layer" @click="nowIndex=key">删除</button></td>
         </tr>
         <!--del all-->
         <tr v-show="myData.length!=0">
@@ -66,7 +66,7 @@
 
 
       <!--pop musk-->
-      <div role="dialog" class="modal fade" id="layer" data-index="{{nowIndex}}">
+      <div role="dialog" class="modal fade" id="layer" data-index="1">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">

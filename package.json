@@ -550,7 +550,9 @@
     "yargs-parser": "^4.2.1"
   },
   "devDependencies": {
+    "bootstrap": "^3.3.7",
     "cooking-vue2": "^0.3.1",
+    "jquery": "^3.2.0",
     "vue": "^2.2.3",
     "vue-cli": "^2.8.1",
     "webpack-cli": "^1.0.0"
