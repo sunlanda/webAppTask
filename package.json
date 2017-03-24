@@ -555,6 +555,7 @@
     "jquery": "^3.2.0",
     "vue": "^2.2.3",
     "vue-cli": "^2.8.1",
+    "vue-router": "^2.3.0",
     "webpack-cli": "^1.0.0"
   },
   "scripts": {

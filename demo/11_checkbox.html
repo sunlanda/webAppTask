@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>vue</title>
-  <style>
-    table {
-      border: 1px solid #000;
-    }
-  </style>
-  <script src="../node_modules/vue/dist/vue.js"></script>
+    <meta charset="UTF-8">
+    <title>vue</title>
+    <style>
+        table {
+            border: 1px solid #000;
+        }
+    </style>
+    <script src="../node_modules/vue/dist/vue.js"></script>
 </head>
 
 <body>
@@ -16,31 +16,31 @@
 <div id="form">
 
 
-  <!--<input type="radio" true-value="01" false-value="nu" v-module="rad" id="rad_che">-->
-  <!--<label for="rad_che">rad_che</label>-->
+    <!--<input type="radio" true-value="01" false-value="nu" v-module="rad" id="rad_che">-->
+    <!--<label for="rad_che">rad_che</label>-->
 
 
-  <input type="checkbox" id="jack" value="01" v-model="checkedNames">
-  <label for="jack">Jack</label>
-  <input type="checkbox" id="john" value="02" v-model="checkedNames">
-  <label for="john">John</label>
-  <input type="checkbox" id="mike" value="03" v-model="checkedNames">
-  <label for="mike">Mike</label>
-  <br>
-  <span>Checked names: {{ checkedNames }}</span>
+    <input type="checkbox" id="jack" value="01" v-model="checkedNames">
+    <label for="jack">Jack</label>
+    <input type="checkbox" id="john" value="02" v-model="checkedNames">
+    <label for="john">John</label>
+    <input type="checkbox" id="mike" value="03" v-model="checkedNames">
+    <label for="mike">Mike</label>
+    <br>
+    <span>Checked names: {{ checkedNames }}</span>
 
-  <br>
-  <br>
-  <br>
-  <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
-  <input type="radio" id="one" value="1" v-model="checkStatus">
-  <label for="one">开启</label>
-  <br>
-  <input type="radio" id="two" value="0" v-model="checkStatus">
-  <label for="two">关闭</label>
-  <br>
-  <span>Picked: {{ checkStatus }}</span>
+    <input type="radio" id="one" value="1" v-model="checkStatus">
+    <label for="one">开启</label>
+    <br>
+    <input type="radio" id="two" value="0" v-model="checkStatus">
+    <label for="two">关闭</label>
+    <br>
+    <span>Picked: {{ checkStatus }}</span>
 
 
 </div>
@@ -49,16 +49,14 @@
 
 <script>
 
-  var app =new Vue ({
-    el:"#form",
-    data:{
-      checkedNames:["02"],
-      checkStatus:["1"]
-    },
-    methods:{
-
-    }
-  })
+    var app = new Vue({
+        el: "#form",
+        data: {
+            checkedNames: ["02"],
+            checkStatus: ["1"]
+        },
+        methods: {}
+    })
 
 </script>
 
