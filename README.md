@@ -1,21 +1,15 @@
-# vuework
 
-> vue,webpack
 
-## Build Setup
+抄了[lin-xin](https://github.com/lin-xin/vue-manage-system)的代码,主要是快速踩一下后台管理系统中的坑
 
-``` bash
-# install dependencies
-npm install
+学习重点:
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+- [x] 项目文件组织
+- [x] proxyTable 代理线上数据
+- [ ] 路由设置和跳转
+- [ ] 富文本转义
+- [ ] 数据渲染表格
+- [ ] 日期选择器/颜色选择器
+- [ ] form表单提交
+- [ ] 图片上传
+- [ ] elementUi在线换肤
